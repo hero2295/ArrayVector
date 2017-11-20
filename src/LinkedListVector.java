@@ -1,8 +1,8 @@
 public class LinkedListVector {
 
-    Node head;
-    Node tail;
-    int size;
+    private static Node head;
+    private static Node tail;
+    private static int size;
 
     public void add(int data){
         Node node = new Node(data);
@@ -88,7 +88,7 @@ public class LinkedListVector {
         return null;
     }
 
-    public void out(){
+    /*public void out(){
         if(head!=null){
             Node node = head;
             System.out.print(node);
@@ -97,22 +97,19 @@ public class LinkedListVector {
                 System.out.print(node+" ");
             }
         }
-    }
+    }*/
 
-    public int getSize(){
+    public static int getSize(){
         return size;
     }
 
-    public double norm(){
+    public static double norm(LinkedListVector list){
         double normal=0;
         Node node = head;
-        while(node.nextNode!=null){
-            normal=node.data*node.data+normal;
-        }
+        while(node.data<list.getSize()){
+            normal=head.data*head.nextNode.data+normal;
+    }
         return Math.sqrt(normal);
     }
-
-
-
 
 }

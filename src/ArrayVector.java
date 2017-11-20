@@ -51,26 +51,19 @@ public class ArrayVector {
         System.out.println();
 
         LinkedListVector list = new LinkedListVector();
-
         list.add(15);
         list.add(16);
         list.add(10);
-
         System.out.println("Does 15 exist?"+" "+list.find(15));
         System.out.println("Does 16 exist?"+" "+list.find(16));
         System.out.println("Does 10 exist?"+" "+list.find(10));
         System.out.println("Does 20 exist?"+" "+list.find(20));
         System.out.println("Does 1 exist?"+" "+list.find(1));
-
-
-        System.out.println("Deleting 16");
-        list.delete(16);
-        System.out.println("Does 16 exist?"+" "+list.find(16));
+        System.out.println("Deleting 10");
+        list.delete(10);
+        System.out.println("Does 10 exist?"+" "+list.find(10));
         System.out.println("List size: "+list.getSize());
-        System.out.println("List normal: "+list.norm());
-
-
-
+        System.out.println("List normal: "+LinkedListVector.norm(list));
 
     }
 }

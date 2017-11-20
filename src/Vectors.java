@@ -6,13 +6,20 @@ public class Vectors {
     public static ArrayVector sum(ArrayVector anarr, ArrayVector curarr){
         for (int i = 0; i<anarr.getSize(); i++) {
             anarr.vector[i] = curarr.getElement(i) + anarr.vector[i];
+            if(anarr.vector[i]>anarr.getSize() || curarr.vector[i]>curarr.getSize()){
+                throw new VectorIndexOutOfBoundsException("At least one of vectors is out of bounds!");
+            }
         }
+
         return anarr;
     }
 
     public static ArrayVector mult(int n){
         for(int i=0; i<arr3.getSize(); i++){
             arr3.vector[i] = arr3.getElement(i)*n;
+            if(arr3.vector[i]>arr3.getSize()){
+                throw new VectorIndexOutOfBoundsException("At least one of vectors is out of bounds!");
+            }
         }
         return arr3;
     }
